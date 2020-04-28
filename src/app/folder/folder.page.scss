@@ -30,3 +30,18 @@ ion-menu-button {
 ion-content ion-toolbar {
   --background: transparent;
 }
+
+.botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-icon {
+  font-size: 25px;
+}
+
+.headerTitle {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Consulta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Suas Despesas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid class="corpoLista">
+        <ion-row class="header">
+          <ion-col>Data</ion-col>
+          <ion-col>Tipo</ion-col>
+          <ion-col>Descrição</ion-col>
+          <ion-col>Valor</ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+        <div *ngFor="let item of despesas" class="lista">
+          <ion-row>
+            <ion-col>{{ item.dia }}/{{ item.mes }}/{{ item.ano }}</ion-col>
+            <ion-col>{{ item.tipo }}</ion-col>
+            <ion-col>{{ item.descricao }}</ion-col>
+            <ion-col>R$ {{ item.valor }}</ion-col>
+            <ion-col (click)="excluie(item.id)">
+              <ion-icon name="trash" style="color: red;"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

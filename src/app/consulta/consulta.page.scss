@@ -1,0 +1,23 @@
+.header {
+    // background: #fff;
+    // color: #000;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.lista {
+    // background: #fff;
+    // color: #000;
+    // height: 100vh;
+}
+
+ion-menu-button {
+    color: var(--ion-color-primary);
+}
+
+.corpoLista {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
